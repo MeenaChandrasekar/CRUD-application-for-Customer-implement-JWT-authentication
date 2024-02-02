@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Customer Management System</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Login Screen -->
+        <div id="login-screen">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login_id">Email:</label>
+                <input type="email" id="login_id" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="button" onclick="authenticateUser()">Login</button>
+            </form>
+        </div>
+
+        <!-- Customer List Screen -->
+        <div id="customer-list-screen" style="display: none;">
+            <h2>Customer List</h2>
+            <button onclick="syncCustomers()">Sync</button>
+            <table id="customer-table">
+                <!-- Customer list will be displayed here dynamically -->
+            </table>
+        </div>
+
+        <!-- Add Customer Screen -->
+        <div id="add-customer-screen" style="display: none;">
+            <h2>Add Customer</h2>
+            <form id="add-customer-form">
+                <!-- Form fields for adding a new customer -->
+            </form>
+            <button type="button" onclick="addCustomer()">Add Customer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
